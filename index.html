@@ -414,6 +414,77 @@
     padding-top: 0.15rem;
   }
 
+  /* PAST READS */
+  .past-reads-list {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: rgba(201, 168, 76, 0.06);
+  }
+
+  .past-read {
+    background: var(--bg-card);
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .past-read-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .past-read-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    font-style: italic;
+  }
+
+  .past-read-author {
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-top: 0.15rem;
+  }
+
+  .past-read-month {
+    font-size: 0.55rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  .past-read-rating {
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .past-read-rating .score {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .past-read-rating .out-of {
+    font-size: 0.55rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.15em;
+  }
+
+  .past-read-rating .stars {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
   /* FOOTER */
   footer {
     text-align: center;
@@ -441,6 +512,14 @@
     color: rgba(154, 148, 136, 0.4);
     letter-spacing: 0.15em;
     margin-top: 1.5rem;
+  }
+
+  .footer-credit {
+    font-size: 0.5rem;
+    color: rgba(154, 148, 136, 0.3);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.6rem;
   }
 
   /* ANIMATIONS */
@@ -518,14 +597,14 @@
   <h2>This Month's Book</h2>
 
   <div class="book-card">
-    <h3>How to Read a Book</h3>
-    <div class="author">Monica Wood</div>
-    <span class="month-label">June 2025</span>
+    <h3>The Names</h3>
+    <div class="author">Florence Knapp</div>
+    <span class="month-label">July 2025</span>
   </div>
 
   <div class="upcoming-card">
-    <span class="month">July 2025</span>
-    <span class="tbd">Drawn from the suggestion box at June's meeting</span>
+    <span class="month">August 2025</span>
+    <span class="tbd">Drawn from the suggestion box at July's meeting</span>
   </div>
 </section>
 
@@ -552,6 +631,29 @@
     <div class="step">
       <div class="step-num">4</div>
       <div class="step-text">Suggest a book for next month. One gets drawn from the hat. That's the next read.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span>&#9830;</span></div>
+
+<!-- PAST READS -->
+<section class="section fade-in">
+  <div class="section-label">The Shelf</div>
+  <h2>What We've Read</h2>
+  <p class="dim">Every book gets a collective rating. No appeals.</p>
+
+  <div class="past-reads-list">
+    <div class="past-read">
+      <div class="past-read-info">
+        <div class="past-read-title">How to Read a Book</div>
+        <div class="past-read-author">Monica Wood</div>
+        <div class="past-read-month">June 2025</div>
+      </div>
+      <div class="past-read-rating">
+        <span class="score">3.7</span><span class="out-of"> / 5</span>
+        <span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+      </div>
     </div>
   </div>
 </section>
@@ -599,6 +701,7 @@
   <div class="footer-name">Booked in Delight</div>
   <div class="footer-line">Last Monday &bull; 6 PM &bull; Delight Public Library</div>
   <div class="footer-sub">Delight, Arkansas</div>
+  <div class="footer-credit">Created by Delight Digital Designs</div>
 </footer>
 
 <script>
